@@ -24,12 +24,12 @@ if not sta_if.isconnected():
           print(wifis)
           for wifi in wifis:
         	   ssid = wifi[0]
-        	   if  ssid == b'Red rage':
+        	   if  ssid == b'ssid*':
     		                 display.text("connecting to",15,0)
-    		                 display.text("Red rage..",15,10)
+    		                 display.text("ssid",15,10)
                                  display.show()
                                  time.sleep(2)
-                                 sta_if.connect(ssid, '234567890')
+                                 sta_if.connect(ssid, 'Password')
                                  if not sta_if.isconnected():
 			                      print('network config:', sta_if.ifconfig())
                       			      display.fill(0)
@@ -38,12 +38,12 @@ if not sta_if.isconnected():
                                               display.text(sta_if.ifconfig()[0] ,15,10)
                                               display.show()
 
-                   if  ssid == b'babakajaal':
+                   if  ssid == b'ssid*':
  		                 display.text("connecting to",15,0)
-                                 display.text("Babakajaal ..",15,10)
+                                 display.text("ssid*",15,10)
                                  display.show()
                                  time.sleep(2)
-                                 sta_if.connect(ssid, 'vanillatuba560')
+                                 sta_if.connect(ssid, 'password')
                                  if not sta_if.isconnected():
 					       print('network config:', sta_if.ifconfig())
                                                display.fill(0)
@@ -53,12 +53,12 @@ if not sta_if.isconnected():
                                                display.text(sta_if.ifconfig()[0] ,15,10)
                                                display.show()
 
-                   if  ssid == b'SimplyGuest A-2':
+                   if  ssid == b'ssid':
                                  display.text("connecting to",15,0)
-                                 display.text("Simply Guest ..",15,10)
+                                 display.text("ssid*",15,10)
                                  display.show()
                                  time.sleep(2)
-                                 sta_if.connect(ssid, 'simply+97@j')
+                                 sta_if.connect(ssid, 'password')
                                  if not sta_if.isconnected() :
 			                      print('network config:', sta_if.ifconfig())
                                               display.fill(0)
@@ -69,7 +69,6 @@ if not sta_if.isconnected():
                                               display.show()
 
 
-'''
 display.fill(0)
 display.show()
 sensor = DHT22(Pin(15,Pin.IN,Pin.PULL_UP))
@@ -86,55 +85,10 @@ while True:
       display.show()
       print(t,h)
       time.sleep(4)
-'''
 
 
 
 
 
 
-'''
-#             import uftpd
 
-#if not sta_if.isconnected():
-#        sta_if.active(False)
-#        ap = network.WLAN(network.AP_IF) # create access-point interface
-#        ap.config(essid='ESP-AP')        # set the ESSID of the access point
-#        ap.active(True)                  # activate the interface
-#        display.text("Connect to AP",15,0)
-#        display.text("ESP-AP",15,10)
-#        display.show()
-        #import uftpd
-
-######################################################################
-
-
-def time_correction():
-	rtc = RTC()
-	print("Time before sync:", rtc.datetime())
-	settime()
-	print("Time after sync:", rtc.datetime())
-
-#time_correction()
-###############################################################  Display ###########################################################################
-
-#temp = esp32.raw_temperature()
-#temp = str(temp)
-#hall = str(esp32.hall_sensor())
-#display.text("temp:"+temp,15,0)
-#display.text("hall:"+hall,20,10)
-
-
-
-#def  local_time():
-#     now = time.time()
-#     y,mo,d,h,mi,sec,ms,diny = time.localtime()
-#     y,mo,d = str(y,mo,d)
-#     return (y,mo,d)
-
-#y,mo,d = local_time()
-
-#display.text(y+":"+mo+":"+d ,25,0)
-#display.text(h+":"+mi+":"+sec,35,0)
-#display.show()
-'''
